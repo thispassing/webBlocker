@@ -1,0 +1,4 @@
+Program Architecture
+
+Accessing hosts file:
+C:\Windows\System32\drivers\etc
