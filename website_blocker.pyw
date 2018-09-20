@@ -4,7 +4,7 @@ from datetime import datetime as dt
 new_host="hosts"
 hosts_path=r"C:\Windows\System32\drivers\etc\hosts"
 redirect="127.0.0.1"
-website_list=["www.facebook.com", "facebook.com", "www.reddit.com", "reddit.com", "mssplus.mcafee.com", "twitch.tv", "www.twitch.tv"]
+website_list=["www.facebook.com", "https://www.facebook.com/", "facebook.com", "www.reddit.com", "reddit.com", "mssplus.mcafee.com", "twitch.tv", "www.twitch.tv"]
 
 while True:
     if dt(dt.now().year, dt.now().month, dt.now().day, 9) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day,12):
@@ -16,7 +16,6 @@ while True:
                     pass
                 else:
                     file.write(redirect+" "+website+"\n")
-    time.sleep(300)
     else:
         with open(hosts_path, 'r+') as file:
             content=file.readlines()
@@ -26,5 +25,4 @@ while True:
                     file.write(line)
             file.truncate()
         print("Party Time!!")
-        break
-    time.sleep(300)
+    time.sleep(5)
